@@ -1,0 +1,21 @@
+X_Matrix=[]
+Y_Matrix=[]
+counter = 0
+
+f=open("iris.txt",'r')
+lines=f.readlines()
+
+for line in lines:
+    if line.split():
+        temp_Matrix = []
+        temp = line.split(',')
+        temp_Matrix.append(temp[0])
+        temp_Matrix.append(temp[1])
+        temp_Matrix.append(temp[2])
+        temp_Matrix.append(temp[3])
+        X_Matrix.append(temp_Matrix)
+        Y_Matrix.append(temp[4])
+
+for y in X_Matrix:
+    if y == 'Iris-setosa\n':
+        y = 0
